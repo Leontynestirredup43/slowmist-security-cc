@@ -36,10 +36,5 @@
       }
     ]
   },
-  "minClawVersion": "1.0.0",
-  "languages": ["en", "zh-CN"],
-  "i18n": {
-    "en": "README.md",
-    "zh-CN": "README.zh-CN.md"
-  }
+  "minClawVersion": "0.1.0"
 }
